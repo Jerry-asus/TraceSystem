@@ -1,0 +1,50 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <Nullable>disable</Nullable>
+    <UseWPF>true</UseWPF>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\OPC_Foundation.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="CommCore\OPCUa\" />
+    <Folder Include="CommCore\S7\" />
+    <Folder Include="CommCore\EIP\" />
+    <Folder Include="CommCore\ModbusTCP\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MahApps.Metro" Version="2.4.9" />
+    <PackageReference Include="MahApps.Metro.IconPacks.Material" Version="4.11.0" />
+    <PackageReference Include="MaterialDesignThemes" Version="4.5.0" />
+    <PackageReference Include="Panuon.UI.Silver" Version="2.2.18" />
+    <PackageReference Include="Prism.Core" Version="8.1.97" />
+    <PackageReference Include="Prism.DryIoc" Version="8.1.97" />
+    <PackageReference Include="RealTimeGraphX" Version="1.0.17" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="OpcComRcw">
+      <HintPath>Extension\OpcComRcw.dll</HintPath>
+    </Reference>
+    <Reference Include="OpcNetApi">
+      <HintPath>Extension\OpcNetApi.dll</HintPath>
+    </Reference>
+    <Reference Include="OpcNetApi.Com">
+      <HintPath>Extension\OpcNetApi.Com.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\OPC_Foundation.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+</Project>
