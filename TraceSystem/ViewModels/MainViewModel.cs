@@ -46,7 +46,7 @@ namespace TraceSystem.ViewModels
         }
 
         public bool IsNavigationTarget(NavigationContext navigationContext)
-        {
+        { 
             return true;
         }
 

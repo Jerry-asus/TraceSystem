@@ -237,13 +237,14 @@ namespace TraceSystem.CommCore.OPCDa
         /// </summary>
         /// <param name="serverName"></param>
         /// <returns></returns>
-        public Respostory Disconnect(string serverName)
+        public Respostory Disconnect(string ProgID, string host)
         {
+            string url = "opcda://" + host + "/" + ProgID;
             try
             {
                 foreach (string item in ServerDic.Keys)
                 {
-                    if(item==serverName)
+                    if(item== url)
                     {
                         ServerDic[item].Subscription.DataChanged -= OnDataChange;
                         ServerDic[item].Subscription.RemoveItems(ServerDic[item].Subscription.Items);

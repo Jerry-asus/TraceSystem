@@ -33,8 +33,7 @@ namespace TraceSystem
             containerRegistry.RegisterForNavigation<SIEView, SIEViewModel>();
             containerRegistry.RegisterForNavigation<SysView, SysViewModel>();
 
-           containerRegistry.Register<IOPCClient, OPCClient>();
-
+            containerRegistry.Register<IOPCClient, OpcClient>();
 
 
         }

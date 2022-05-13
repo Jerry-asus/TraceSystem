@@ -11,27 +11,37 @@ namespace TraceSystem.Models
     public class OPCCLientModel : BindableBase
     {
 
+
+        public OPCCLientModel()
+        {
+            ServerList = new ObservableCollection<OPCCombox>();
+            Connect = true;
+        }
+
         private string hostName;
-        private ObservableCollection<List<string>> serverProgID;
+        private ObservableCollection<OPCCombox> serverList;
         private int rate;
         private ObservableCollection<string> items;
         private string itemName;
+        private OPCCombox selectServer;
         /// <summary>
         /// 主机名
         /// </summary>
         public string HostName
         {
             get { return hostName; }
-            set { hostName = value; RaisePropertyChanged(); }
+            set { hostName = value;
+                if(hostName!=null)
+                RaisePropertyChanged(); }
         }
 
        /// <summary>
        /// OPC服务器ID
        /// </summary>
-        public ObservableCollection<List<string>> ServerProgID
+        public ObservableCollection<OPCCombox> ServerList
         {
-            get { return serverProgID; }
-            set { serverProgID = value; RaisePropertyChanged(); }
+            get { return serverList; }
+            set { serverList = value; }
         }
     
         /// <summary>
@@ -61,6 +71,41 @@ namespace TraceSystem.Models
             set { items = value; RaisePropertyChanged(); }
         }
 
+       
+
+        public OPCCombox SelectServer
+        {
+            get { return selectServer; }
+            set { selectServer = value;RaisePropertyChanged(); }
+        }
+
+        private bool connect;
+
+        public bool Connect
+        {
+            get { return connect;; }
+            set { connect= value;RaisePropertyChanged(); }
+        }
+
+
+    }
+    public class OPCCombox:BindableBase
+    {
+        private int id;
+
+        public int ID
+        {
+            get { return id; }
+            set { id = value;RaisePropertyChanged(); }
+        }
+
+        private string name;
+
+        public string Name
+        {
+            get { return name; }
+            set { name = value;RaisePropertyChanged(); }
+        }
 
 
     }

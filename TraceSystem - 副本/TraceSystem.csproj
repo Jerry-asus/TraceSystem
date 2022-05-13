@@ -1,0 +1,72 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Nullable>disable</Nullable>
+    <UseWPF>true</UseWPF>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\OPC_Foundation.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MahApps.Metro" Version="2.4.9" />
+    <PackageReference Include="MahApps.Metro.IconPacks.Material" Version="4.11.0" />
+    <PackageReference Include="MaterialDesignThemes" Version="4.5.0" />
+    <PackageReference Include="Meziantou.Framework.WPF" Version="1.5.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.25">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.25" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.25">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.UnitOfWork" Version="3.1.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="ObservableCollections" Version="1.1.2" />
+    <PackageReference Include="OxyPlot.Core" Version="2.1.0" />
+    <PackageReference Include="OxyPlot.Wpf" Version="2.1.0" />
+    <PackageReference Include="Prism.Core" Version="8.1.97" />
+    <PackageReference Include="Prism.DryIoc" Version="8.1.97" />
+    <PackageReference Include="Sharp7" Version="1.1.82" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="OpcComRcw">
+      <HintPath>Extension\OpcComRcw.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="OpcNetApi">
+      <HintPath>Extension\OpcNetApi.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="OpcNetApi.Com">
+      <HintPath>Extension\OpcNetApi.Com.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="SciChart.Charting">
+      <HintPath>C:\Program Files (x86)\SciChart\SciChart SDK\Lib\netcoreapp3.1\SciChart.Charting.dll</HintPath>
+    </Reference>
+    <Reference Include="SciChart.Core">
+      <HintPath>C:\Program Files (x86)\SciChart\SciChart SDK\Lib\netcoreapp3.1\SciChart.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="SciChart.Data">
+      <HintPath>C:\Program Files (x86)\SciChart\SciChart SDK\Lib\netcoreapp3.1\SciChart.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="SciChart.Drawing">
+      <HintPath>C:\Program Files (x86)\SciChart\SciChart SDK\Lib\netcoreapp3.1\SciChart.Drawing.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\OPC_Foundation.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+</Project>
